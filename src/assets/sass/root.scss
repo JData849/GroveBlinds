@@ -13,8 +13,8 @@
 @media only screen and (min-width: 0rem) {
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
-        --primary: #ff6a3e;
-        --primaryLight: #ffba43;
+        --primary: #8fd0b7;
+        --primaryLight: #8fd0b7;
         --secondary: #ffba43;
         --secondaryLight: #ffba43;
         --headerColor: #1a1a1a;
@@ -90,6 +90,26 @@
         margin: 0;
         color: var(--bodyTextColor);
     }
+    .cs-image-card {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.cs-image-card picture {
+  display: block;
+}
+
+.cs-caption {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
 }
 
 /* Components + Utilities */
@@ -1484,4 +1504,238 @@
             width: auto;
         }
     }
+
 }
+#reviews-widget-14 {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: var(--sectionBackground);
+    border-radius: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  
+    h2, h3, h4 {
+      color: var(--headerColor);
+      font-family: var(--headerFont);
+    }
+  
+    p, span, a {
+      font-family: var(--bodyFont);
+      color: var(--bodyTextColor);
+    }
+  
+    a {
+      text-decoration: underline;
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+ /*-- -------------------------- -->
+<---        Why Choose          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #why-choose-37 {
+        position: relative;
+        /* Prevents overflow from the image going off screen */
+        overflow: hidden;
+
+        .cs-container {
+            width: 100%;
+            max-width: calc(1280 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 7vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: calc(630 / 16 * 1rem);
+            margin-right: auto;
+            /* moved section padding to the .cs-content so we can have the cs-picture be full width on mobile without the padding preventing it from doing so */
+            padding: var(--sectionPadding);
+            padding-top: 0;
+            /* prevents padding from affecting width and height */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-text {
+            margin-bottom: calc(16 / 16 * 1rem);
+            &:last-of-type {
+                margin-bottom: calc(32 / 16 * 1rem);
+            }
+        }
+
+        .cs-ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .cs-li {
+            list-style: none;
+            font-size: calc(20 / 16 * 1rem);
+            line-height: 1.5em;
+            font-weight: 700;
+            margin-bottom: calc(8 / 16 * 1rem);
+            color: #1a1a1a;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .cs-icon {
+            margin-right: calc(16 / 16 * 1rem);
+        }
+
+        .cs-button-solid {
+            font-size: calc(16 / 16 * 1rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: calc(150 / 16 * 1rem);
+            padding: 0 calc(24 / 16 * 1rem);
+            background-color: var(--primary);
+            border-radius: calc(4 / 16 * 1rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: calc(4 / 16 * 1rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-button-solid {
+            /* button override */
+            margin-top: calc(32 / 16 * 1rem);
+        }
+
+        .cs-picture {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: calc(300 / 16 * 1rem);
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* makes it act like a background image */
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* In Between - 650px */
+@media only screen and (min-width: 40.625rem) {
+    #why-choose-37 {
+        .cs-ul {
+            columns: 2;
+            max-width: calc(550 / 16 * 1rem);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #why-choose-37 {
+        /* moved padding pack to the section container */
+        padding: var(--sectionPadding);
+
+        .cs-content {
+            width: 60%;
+            padding: 0;
+        }
+
+        .cs-picture {
+            height: 100%;
+            width: 50%;
+            left: 50%;
+            right: auto;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            z-index: -1;
+
+            &:before {
+                /* Triangle over image */
+                content: "";
+                width: calc(350 / 16 * 1rem);
+                background: #fff;
+                /* makes the triangle shape over the image */
+                clip-path: polygon(0 0, 73% 0, 42% 100%, 0 100%);
+                opacity: 1;
+                display: block;
+                position: absolute;
+                top: calc(-2 / 16 * 1rem);
+                bottom: calc(-2 / 16 * 1rem);
+                left: calc(-2 / 16 * 1rem);
+                right: auto;
+                z-index: 10;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/* Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+    #why-choose-37 {
+        .cs-picture {
+            &:before {
+                width: calc(300 / 16 * 1rem);
+                -webkit-clip-path: polygon(0 0, 100% 0, 14% 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 14% 100%, 0 100%);
+            }
+        }
+    }
+}
+
+                                
