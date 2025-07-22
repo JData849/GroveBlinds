@@ -597,3 +597,100 @@
         }
     }
 }
+
+
+/* ---------------------------------------------
+   Quote Calculator Styles (#quote-calc-373)
+--------------------------------------------- */
+
+@media only screen and (min-width: 0rem) {
+    #quote-calc-373 {
+        padding: var(--sectionPadding);
+        background-color: #f7f7f7;
+
+        .cs-container {
+            max-width: calc(640 / 16 * 1rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: calc(24 / 16 * 1rem);
+        }
+
+        .cs-content {
+            width: 100%;
+        }
+
+        .cs-topper {
+            font-size: calc(14 / 16 * 1rem);
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: calc(8 / 16 * 1rem);
+        }
+
+        .cs-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            color: var(--headerColor);
+            margin-bottom: calc(16 / 16 * 1rem);
+        }
+
+        .cs-text {
+            font-size: calc(16 / 16 * 1rem);
+            color: var(--bodyTextColor);
+            margin-bottom: calc(24 / 16 * 1rem);
+        }
+
+        .cs-form {
+            display: flex;
+            flex-direction: column;
+            gap: calc(16 / 16 * 1rem);
+            width: 100%;
+        }
+
+        .cs-label {
+            font-weight: 600;
+            text-align: left;
+            color: var(--headerColor);
+        }
+
+        .cs-input {
+            padding: calc(12 / 16 * 1rem);
+            border: 1px solid #ccc;
+            border-radius: calc(6 / 16 * 1rem);
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .cs-button-solid {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            background-color: #8fd0b7;
+            padding: calc(12 / 16 * 1rem) calc(24 / 16 * 1rem);
+            border-radius: calc(4 / 16 * 1rem);
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cs-button-solid:hover {
+            background-color: #78c5a8;
+        }
+
+        .cs-result {
+            margin-top: calc(24 / 16 * 1rem);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #023355;
+        }
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
